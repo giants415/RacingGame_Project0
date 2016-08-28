@@ -1,4 +1,14 @@
+h1, h2 {
+  padding-left: 2em;
+}
+
 .col-md-8{
+  border: 1px black solid;
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+.col-md-12{
   border: 1px black solid;
   margin-top: 1em;
   margin-left: 2em;
