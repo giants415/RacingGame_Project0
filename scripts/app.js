@@ -1,13 +1,15 @@
-// var car1 = document.getElementById('#car1');
-// var car2 = document.getElementById('#car2');
-
-
 $(document).ready( function() {
   console.log("main JS is linked");
   ///Start of Game Visuals
   $("#lane1").append('<img id=\"car1\" src="imgs/blueCar.png" />');
   $("#lane2").append('<img id=\"car2\" src="imgs/orangeCar.png" />');
+  var car1 = document.getElementById('#car1');
+  var car2 = document.getElementById('#car2');
   $("#msgDisplay").append("To begin, press enter");
+  //   if ($(this).css("padding-left") = "1700px"){
+  //     console.log($(this) + " is the winner!");
+  //   };
+  // $.when($('#car1' || '#car2').css("padding-left") = "1700px").then(declareWinner());
   // var car1.val() = 97;
   // var car2 = document.getElementById('#car2');
 });
@@ -16,6 +18,7 @@ $(document).ready( function() {
 ///keypress script
 $(document).on("keypress", function(event) {
   // console.log(event);
+  $('#msgDisplay').empty();
   if(event.originalEvent.charCode == 97) {
     // console.log("you pressed A");
     carMover1();
@@ -45,20 +48,29 @@ $(document).on("keypress", function(event) {
 
 function carMover1() {
     // console.log("carMover triggered");
-    $('#car1').css("padding-left", "+=10");
+    $('#car1').css("padding-left", "+=20");
+    // console.log($('#car1').css("padding-left"));
+    declareWinner();
 }
 
 function carMover2() {
     // console.log("carMover triggered");
-    $('#car2').css("padding-left", "+=10");
+    $('#car2').css("padding-left", "+=20");
+    declareWinner();
 }
 
-function declareWinner (){
-  if ($(this).css("padding-left") == "1320px") {
-    $('#msgDisplay').append($(this) + "has won the race!")
+function declareWinner () {
+  if ($('#car1').css("padding-left") === "1700px") {
+    // $('#msgDisplay').append($(this) + "has won the race!");
+    $('#msgDisplay').append("Car 1 has won the race!");
+  } else if ($('#car2').css("padding-left") === "1700px"){
+    // $('#msgDisplay').append($(this) + "has won the race!");
+    $('#msgDisplay').append("Car 2 has won the race!");
   }
+  //  else {
+  //   console.log("not there yet");
+  // }
 }
-
 /* why was event.originalEvent.charCode used:
 the keycodes I looked up online did not correctly correspond to the keys
 I wanted to use so w/ Matt's help, I was able to find the correct keycodes

@@ -13,6 +13,10 @@ h1, h2 {
   color: 	#00b2ac;
 }
 
+h2 {
+  content-height:
+}
+
 /*.col-md-8{
   border: 1px black solid;
   margin-top: 1em;
@@ -21,6 +25,7 @@ h1, h2 {
 
 .col-md-12{
   border: 1px black solid;
-  margin: 1em 2em 0 2em;
+  margin: 1em 2em 0 4em;
   background-image: url('https://thumbs.dreamstime.com/t/road-game-road-illustration-1347102.jpg');
+  max-width: 2000px;
 }
