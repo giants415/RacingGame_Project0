@@ -5,7 +5,7 @@ $(document).ready( function() {
   $("#lane2").append('<img id=\"car2\" src="imgs/orangeCar.png" />');
   var car1 = document.getElementById('#car1');
   var car2 = document.getElementById('#car2');
-  $("#msgDisplay").append("To begin, press enter");
+  $("#msgDisplay").append("To begin the countdown, press 0");
   //   if ($(this).css("padding-left") = "1700px"){
   //     console.log($(this) + " is the winner!");
   //   };
@@ -26,7 +26,7 @@ $(document).on("keypress", function(event) {
     // console.log("you pressed L")
     carMover2();
   } else if (event.originalEvent.charCode == 48) {
-    // console.log("you pressed 0")
+    console.log("you pressed 0")
   } else {
     console.log("you didnt press A, L, or 0")
     /* use .one & append method to notify people once they cant use keys besides A, L, 0*/
@@ -71,6 +71,27 @@ function declareWinner () {
   //   console.log("not there yet");
   // }
 }
+
+///countdown script
+// window.setTimeout(countdownV2(), 1000)
+// function countdownV2() {
+//   $('#msgDisplay').append("3");
+//   $('#msgDisplay').append("2");
+//   $('#msgDisplay').append("1");
+//   $('#msgDisplay').append("GO!");
+// }
+
+
+
+function countdownV1() {
+  for (var i=3; i > -1; i--) {
+    if (i > 0) {
+      $('#msgDisplay').append([i]);
+      $('#msgDisplay').empty();
+  }
+}
+
+
 /* why was event.originalEvent.charCode used:
 the keycodes I looked up online did not correctly correspond to the keys
 I wanted to use so w/ Matt's help, I was able to find the correct keycodes
