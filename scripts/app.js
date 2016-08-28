@@ -1,13 +1,15 @@
-var car1;
-var car2;
+// var car1 = document.getElementById('#car1');
+// var car2 = document.getElementById('#car2');
 
 
 $(document).ready( function() {
   console.log("main JS is linked");
   ///Start of Game Visuals
-  $("#lane1").append('<img id=\"car1\" style="padding-left: 0;" src="imgs/blueCar.png" />');
+  $("#lane1").append('<img id=\"car1\" src="imgs/blueCar.png" />');
   $("#lane2").append('<img id=\"car2\" src="imgs/orangeCar.png" />');
-  $("#startMsg").append("To begin, press enter");
+  $("#msgDisplay").append("To begin, press enter");
+  // var car1.val() = 97;
+  // var car2 = document.getElementById('#car2');
 });
 
 
@@ -15,12 +17,13 @@ $(document).ready( function() {
 $(document).on("keypress", function(event) {
   // console.log(event);
   if(event.originalEvent.charCode == 97) {
-    console.log("you pressed A");
-    carMover();
+    // console.log("you pressed A");
+    carMover1();
   } else if (event.originalEvent.charCode == 108) {
-    console.log("you pressed L")
+    // console.log("you pressed L")
+    carMover2();
   } else if (event.originalEvent.charCode == 48) {
-    console.log("you pressed 0")
+    // console.log("you pressed 0")
   } else {
     console.log("you didnt press A, L, or 0")
     /* use .one & append method to notify people once they cant use keys besides A, L, 0*/
@@ -36,9 +39,24 @@ $(document).on("keypress", function(event) {
 //   $('#car1').css('padding-left', currentPadding + 10);
 // }
 
-function carMover() {
-    console.log("carMover triggered");
+/// Maybe do Object Oriented / car constructor? Would allow me to set an interal value
+// to the same as my charCode which might associate the two together. Or maybe attaching
+// the carMover function to a prototype?
+
+function carMover1() {
+    // console.log("carMover triggered");
     $('#car1').css("padding-left", "+=10");
+}
+
+function carMover2() {
+    // console.log("carMover triggered");
+    $('#car2').css("padding-left", "+=10");
+}
+
+function declareWinner (){
+  if ($(this).css("padding-left") == "1320px") {
+    $('#msgDisplay').append($(this) + "has won the race!")
+  }
 }
 
 /* why was event.originalEvent.charCode used:
@@ -54,10 +72,3 @@ their keycodes were now working as intended
 total whereas I need to prevent holding the key from triggering a continous firing of
 my event */
 /* ^^^^ If I cant figure this out, rename game to dragrace and make it about reaction time*/
-
-
-
-
-
-
-//animation effect

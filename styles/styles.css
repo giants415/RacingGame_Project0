@@ -1,15 +1,26 @@
-h1, h2 {
-  padding-left: 2em;
+header {
+  margin: 2em 0 2em 0;
 }
 
-.col-md-8{
+body {
+  background-color: #736b76;
+}
+
+h1, h2 {
+  padding-left: 2em;
+  text-align: center;
+  font-family: 'Coda', sans-serif;
+  color: 	#00b2ac;
+}
+
+/*.col-md-8{
   border: 1px black solid;
   margin-top: 1em;
   margin-left: 2em;
-}
+}*/
 
 .col-md-12{
   border: 1px black solid;
-  margin-top: 1em;
-  margin-left: 2em;
+  margin: 1em 2em 0 2em;
+  background-image: url('https://thumbs.dreamstime.com/t/road-game-road-illustration-1347102.jpg');
 }
