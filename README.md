@@ -11,74 +11,59 @@ Here are some popular bonus features that would affect your data structure plan:
 
 As you work, you can edit this README to add a section at the top with your name, a link to the original repository, and a 3-5 sentence reflection on completing this assignment. Push your updates to GitHub and add a link to the repo to the "My Work" section of your website!-->
 
-#Andrew Vinocur -- WDI 31 -- Project 0: Racing game
+#Andrew Vinocur -- WDI 31
+##Project 0: Racing Game
 
+####Link: andrewvracinggame.bitballoon.com
 
 ##Deliverable 
 
+###Description
+Players choose to drive either the blue or orange car by pressing L or A. Upon reaching the end of the track, the users are notified of the winning car by a message above the track and the sound of a cheering crowd.
+
 ###User Stories
-Before Game Begins: Allow players to enter a name and choose the color of their car
 
-1) At least 2 users will enter into the game w/ their chosen cars
+1) Users read the rules at the top of the page. 
 
-2) A countdown will appear (somewhere visible to both players) and will cue the players to start at the end of the countdown
+2) Users choose whether to pilot the blue or orange car. 
 
-3) After the countdown, players will "Start" and go around the track
+3) After choosing, players press the corresponding key to make their car move. 
 
-4) After # of laps, the player that crosses the finish line first will win
+4) After reaching the end of the track, a winner is declared. 
 
-5) Game ends and players will be given an option to race again
+5) Players may manually refresh the page to race again. 
 
 ###Data Structures
 
 1) Cars
 
-* Collison box (function)
-* Color (CSS/Function)
-* Object
+* Javascript, HTML, CSS
 
 2) Track
 
-* Walls (function)
-
-3) Start/Finish line
-
-* (Function) keeps track of players crossing start/finish line
-
-4) Time clock
-
-* (Function) A clock that will expire after a set amount of time preventing infinite races
-
-5) Background
-
-* Image
+* jQuery/Javascript, HTML
 
 
 ###Development Stories
 
-1) Users see an intro screen, enter name and choose car color
+Future: Users will press 0 to begin a countdown for the start of the race.
+* Javascript
 
-* HTML to display the screen and JS/jQ to apply name to chosen car
+1) Users press A or L to make cars move.
 
-2) Race starts, users press keys to direct their car
+* jQuery listener, Javascript manipulates padding to make cars advance
 
-* jQuery listener + CSS animation to make it move
+2) Once a car reaches the end of the track, a message displays above the track and sound effect plays  
 
-3) Players race around the track 
+* jQuery/Javascript
+* HTML DOM manipulation 
 
-* JS Counter to keep track of laps
-* jQ listener to detect collision, crossing of line
 
-4) User that completes # of laps first will be declared winner
+###Future Improvements
 
-* JS/jQ alert that appends to an element in the DOM
-
-###Potential Challenges
-
-*Mapping keys to the different movements
-
-*Determing acceleration/speed of the cars
-
-*Hitboxes to determine crashes
+* Fixed stopping point when race ends
+* Reset button 
+* Countdown timer to signal start of the game after user initiation 
+* Background image of crowd in the stands
 
 
