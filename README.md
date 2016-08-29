@@ -61,7 +61,7 @@ Future: Users will press 0 to begin a countdown for the start of the race.
 
 ###Future Improvements
 
-* Fixed stopping point when race ends
+* Fixed stopping point when race ends (Solved 8/29, thank you to Misha for the idea)
 * Reset button 
 * Countdown timer to signal start of the game after user initiation 
 * Background image of crowd in the stands

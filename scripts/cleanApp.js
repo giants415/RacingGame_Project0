@@ -35,8 +35,10 @@ function declareWinner () {
   if ($('#car1').css("padding-left") === "1700px") {
     audio.play();
     $('#msgDisplay').append("Car 1 has won the race!");
+    $(document).off("keypress");
   } else if ($('#car2').css("padding-left") === "1700px") {
     audio.play();
     $('#msgDisplay').append("Car 2 has won the race!");
+    $(document).off("keypress");
   }
 }
