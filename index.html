@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!--JS files-->
-    <script src="scripts/app.js"></script>
+    <!-- <script src="scripts/app.js"></script> contains my notes interspersed w/ code-->
+    <script src="scripts/cleanApp.js"></script>
     <!--Style Sheets-->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -21,8 +22,15 @@
   </head>
   <body>
     <header>
-      <h1>The Drag Race<h1>
-      <h2 id="msgDisplay"></h2>
+      <h1 id="title">Welcome to The Drag<h1>
+      <h2>Instructions</h2>
+      <h3>
+      <p id ="blueLine" class="lineSpacer">Press A to move the blue car</p><br>
+      <p id= "orangeLine" class="lineSpacer">Press L to move the orange car</p><br>
+      <p class="lineSpacer">First to reach the end of the track, wins!</p>
+     </h3>
+     <h2 id="msgDisplay"></h2>
+      <!-- <button name = "reset">Click here to race again</button> -->
     </header>
     <div class="row">
        <div id="lane1" class="col-md-12"></div>

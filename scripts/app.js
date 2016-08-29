@@ -5,33 +5,58 @@ $(document).ready( function() {
   $("#lane2").append('<img id=\"car2\" src="imgs/orangeCar.png" />');
   var car1 = document.getElementById('#car1');
   var car2 = document.getElementById('#car2');
-  $("#msgDisplay").append("To begin the countdown, press 0");
+  // var initialState = $('#document').clone(true);
+  $("#msgDisplay").append("Imagine a really cool countdown");
   //   if ($(this).css("padding-left") = "1700px"){
   //     console.log($(this) + " is the winner!");
   //   };
   // $.when($('#car1' || '#car2').css("padding-left") = "1700px").then(declareWinner());
   // var car1.val() = 97;
   // var car2 = document.getElementById('#car2');
+  // function resetGame () {
+  //   $('#document').replaceWith(initialState.clone(true));
+  // }
+
+  $(document).on("keypress", function(event) {
+    // console.log(event);
+    $('#msgDisplay').empty();
+    if(event.originalEvent.charCode == 97) {
+      // console.log("you pressed A");
+      carMover1();
+    } else if (event.originalEvent.charCode == 108) {
+      // console.log("you pressed L")
+      carMover2();
+    } else if (event.originalEvent.charCode == 48) {
+      console.log("you pressed 0");
+      resetGame();
+      // countdownV1();
+    } else {
+      console.log("you didnt press A, L, or 0")
+      /* use .one & append method to notify people once they cant use keys besides A, L, 0*/
+    }
+  });
 });
 
 
 ///keypress script
-$(document).on("keypress", function(event) {
-  // console.log(event);
-  $('#msgDisplay').empty();
-  if(event.originalEvent.charCode == 97) {
-    // console.log("you pressed A");
-    carMover1();
-  } else if (event.originalEvent.charCode == 108) {
-    // console.log("you pressed L")
-    carMover2();
-  } else if (event.originalEvent.charCode == 48) {
-    console.log("you pressed 0")
-  } else {
-    console.log("you didnt press A, L, or 0")
-    /* use .one & append method to notify people once they cant use keys besides A, L, 0*/
-  }
-});
+// $(document).on("keypress", function(event) {
+//   // console.log(event);
+//   $('#msgDisplay').empty();
+//   if(event.originalEvent.charCode == 97) {
+//     // console.log("you pressed A");
+//     carMover1();
+//   } else if (event.originalEvent.charCode == 108) {
+//     // console.log("you pressed L")
+//     carMover2();
+//   } else if (event.originalEvent.charCode == 48) {
+//     console.log("you pressed 0");
+//     resetGame();
+//     // countdownV1();
+//   } else {
+//     console.log("you didnt press A, L, or 0")
+//     /* use .one & append method to notify people once they cant use keys besides A, L, 0*/
+//   }
+// });
 
 ///car movement script
 // document.getElementById("car1").on("event" <-- used to precede carmover function
@@ -67,10 +92,8 @@ function declareWinner () {
     // $('#msgDisplay').append($(this) + "has won the race!");
     $('#msgDisplay').append("Car 2 has won the race!");
   }
-  //  else {
-  //   console.log("not there yet");
-  // }
 }
+
 
 ///countdown script
 // window.setTimeout(countdownV2(), 1000)
@@ -83,13 +106,14 @@ function declareWinner () {
 
 
 
-function countdownV1() {
-  for (var i=3; i > -1; i--) {
-    if (i > 0) {
-      $('#msgDisplay').append([i]);
-      $('#msgDisplay').empty();
-  }
-}
+// function countdownV1() {
+//   var counter = 3;
+//   while (counter > 0) {
+//     $('#msgDisplay').append([counter]);
+//     counter = counter - 1;
+//     window.setTimeout(1000);
+//   }
+// }
 
 
 /* why was event.originalEvent.charCode used:
