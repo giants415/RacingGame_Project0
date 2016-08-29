@@ -14,7 +14,7 @@ As you work, you can edit this README to add a section at the top with your name
 #Andrew Vinocur -- WDI 31
 ##Project 0: Racing Game
 
-####Link: andrewvracinggame.bitballoon.com
+####Link: [andrewvracinggame.bitballoon.com](http://andrewvracinggame.bitballoon.com)
 
 ##Deliverable 
 
